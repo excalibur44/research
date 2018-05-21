@@ -1,1 +1,3 @@
-:)
+Just an archive, for some reason...
+
+If you want to find a shell script to install shadowsocks, please go here: [teddysun/shadowsocks_install](https://github.com/teddysun/shadowsocks_install)
