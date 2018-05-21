@@ -66,7 +66,7 @@ get_latest_version(){
     [ -z ${ver} ] && echo "[${red}Error${plain}] Get shadowsocks-libev latest version failed!" && exit 1
     shadowsocks_libev_ver="shadowsocks-libev-$(echo ${ver} | sed -e 's/^[a-zA-Z]//g')"
     download_link="https://github.com/shadowsocks/shadowsocks-libev/releases/download/${ver}/${shadowsocks_libev_ver}.tar.gz"
-    init_script_link="https://raw.githubusercontent.com/uxh/research/master/shadowsocks-libev-debian"
+    init_script_link="https://raw.githubusercontent.com/excalibur44/research/master/shadowsocks-libev-debian"
 }
 #Get opsy
 get_opsy(){
@@ -186,7 +186,7 @@ pre_install(){
     #Set shadowsocks-libev port
     while true
     do
-    dport=$(shuf -i 2999-9999 -n 1)
+    dport=$(shuf -i 40000-49999 -n 1)
     echo -e "Please set shadowsocks port"
     read -p "(Default: ${dport}):" shadowsocksport
     [ -z "$shadowsocksport" ] && shadowsocksport=${dport}
